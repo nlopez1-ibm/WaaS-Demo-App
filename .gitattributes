@@ -1,0 +1,4 @@
+# file encoding bin with some exceptions
+*.xmit binary
+.gitattributes zos-working-tree-encoding=iso8859-1 git-encoding=utf-8 
+* zos-working-tree-encoding=ibm-1047  git-encoding=utf-8 
