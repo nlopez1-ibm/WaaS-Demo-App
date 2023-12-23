@@ -1,4 +1,5 @@
 //IBMUSERG JOB 'ACCT#',MSGCLASS=H,REGION=0M,MSGLEVEL=(1,1)
+//*   Dec'2023 refac
 //*
 //*   Application runtime replication job (DUMP) by Nelson Lopez
 //* Submit this job on a Dev LPAR to DUMP a Team's runtime datasets.
@@ -141,7 +142,7 @@
 //STDERR   DD   SYSOUT=*
 //STDPARM  DD   *
 SH git --version; pwd ; rm -fr git_tmp; mkdir git_tmp; cd git_tmp ;
- export r=WaaS-DemoApp-IAC.git ;
+ export r=WaaS-Demo-App.git ;
  export p=ghp_mV70mLZbjc4bApO4ES5 ;
  export t=Pr41113NFXr3Os0k7 ;
  git clone https://oauth2:$p$t@github.com/nlopez1-ibm/$r ;

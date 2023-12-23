@@ -1,6 +1,6 @@
 //IBMUSERR JOB 'ACCT#',MSGCLASS=H,REGION=0M,MSGLEVEL=(1,1)
 //**
-//* TODO: ADD CBSADUMP
+//*   Dec'2023 refac
 //*
 //* Restore Application runtime datasets created by APPDUMP.jcl
 //* Use $initVSI.bat to setup the new env and run this job.
@@ -29,12 +29,12 @@
 //* Receive the images
 //*
 //RECV EXEC PGM=IKJEFT01
-//IAPP DD PATH='/u/ibmuser/tmp/WaaS-DemoApp-IAC/applibs.xmit',
+//IAPP DD PATH='/u/ibmuser/WaaS-Demo-App/applibs.xmit',
 // PATHDISP=(KEEP,KEEP),PATHOPTS=OWRONLY,PATHMODE=(SIRUSR,SIWUSR)
 //OAPP DD  DISP=(NEW,CATLG),DSN=IBMUSER.WAZI.DUMP.APPLIBS.COMP,
 // DCB=(RECFM=F,DSORG=PS,LRECL=1024,BLKSIZE=1024),SPACE=(CYL,(1,15)),
 // UNIT=SYSDA
-//ISYS DD PATH='/u/ibmuser/tmp/WaaS-DemoApp-IAC/syslibs.xmit',
+//ISYS DD PATH='/u/ibmuser/WaaS-Demo-App/syslibs.xmit',
 // PATHDISP=(KEEP,KEEP),PATHOPTS=OWRONLY,PATHMODE=(SIRUSR,SIWUSR)
 //OSYS DD  DISP=(NEW,CATLG),DSN=IBMUSER.WAZI.DUMP.SYSLIBS.COMP,
 // DCB=(RECFM=F,DSORG=PS,LRECL=1024,BLKSIZE=1024),SPACE=(CYL,(1,15)),
